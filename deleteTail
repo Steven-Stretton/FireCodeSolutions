@@ -1,0 +1,13 @@
+public ListNode deleteAtTail(ListNode head) {
+    
+    if (head == null) {
+        return null;
+    } else if (head.next == null) {
+        return null;
+    } else if (head.next.next == null) {
+        head.next = null;
+    } else {
+        deleteAtTail(head.next);
+    }
+    return head;
+}
