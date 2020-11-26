@@ -1,0 +1,9 @@
+public static void flipHorizontalAxis(int[][] matrix) {
+    for (int t = 0; t < matrix.length / 2; t++) {
+        for (int i = 0; i < matrix[t].length; i++) {
+            int temp = matrix[t][i];
+            matrix[t][i] = matrix[(matrix.length-1)-t][i];
+            matrix[(matrix.length-1)-t][i] = temp;
+        }
+    }
+}
