@@ -1,0 +1,10 @@
+public static void flipItVerticalAxis(int[][] matrix) {
+    
+    for (int m = 0; m < matrix.length; m++) {
+        for (int n = 0; n < matrix[m].length/2; n++) {
+            int temp = matrix[m][n];
+            matrix[m][n] = matrix[m][(matrix[m].length-1) - n];
+            matrix[m][(matrix[m].length-1) - n] = temp;
+        }
+    }
+}
