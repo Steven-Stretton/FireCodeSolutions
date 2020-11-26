@@ -1,5 +1,4 @@
 public ListNode deleteAtHead(ListNode head) {
-    
     if (head == null) {
         return null;
     } else {
