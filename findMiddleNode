@@ -1,0 +1,22 @@
+public ListNode findMiddleNode(ListNode head) {
+    
+    if (head == null) { // If list is empty
+        return null;
+    } else if (head.next == null) { // If list contains one element
+        return head;
+    }
+    
+    ListNode slow = head;
+    ListNode fast = head;
+    
+    while (fast.next != null) {
+        
+        if (fast.next.next == null) {
+            return slow;
+        } else {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+    }
+    return slow;
+}
