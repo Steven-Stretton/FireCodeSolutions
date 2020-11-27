@@ -1,0 +1,14 @@
+public static String reverseString(String str){
+    
+    if (str == null) {
+        return null;
+    }
+    
+    String outputString = "";
+    
+    for (int i = str.length()-1; i >= 0; i--) {
+        outputString += str.charAt(i);
+    }
+    
+    return outputString;
+}
