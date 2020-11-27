@@ -1,0 +1,18 @@
+public ListNode insertAtTail(ListNode head, int data) {
+    
+    // If empty, create new node and return
+    if (head == null) {
+        ListNode newNode = new ListNode(data);
+        return newNode;
+    }
+    
+    ListNode current = head;
+    // Loop through linkedList until at the end 
+    while (current.next != null) {
+        current = current.next;
+    }
+    // Create new Node and insert it as the current nodes next
+    ListNode newNode = new ListNode(data);
+    current.next = newNode;
+    return head; 
+}
