@@ -1,0 +1,28 @@
+public static int reverseInt(int x) {
+
+        StringBuilder sb = new StringBuilder();
+        int number = Math.abs(x);
+        boolean negative = false;
+
+        if (Integer.toString(number).length() == 1) {
+            return number;
+        }
+
+        if (x < 0) {
+            negative = true;
+        }
+
+        while (number > 10) {
+            sb.append(number % 10);
+            number = number / 10;
+        }
+
+        sb.append(number);
+        int output = Integer.parseInt(sb.toString());
+
+        if (negative) {
+            return -output;
+        } else {
+            return output;
+        }
+    }
