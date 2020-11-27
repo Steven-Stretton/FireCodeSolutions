@@ -1,0 +1,25 @@
+public static Character firstNonRepeatedCharacter(String str) {
+
+        char[] arr = str.toCharArray();
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        // Add each character to the hashmap
+        // If character key exists, increment it
+        for (int i = 0; i < arr.length; i++) {
+            if (map.containsKey(arr[i])) {
+                map.put(arr[i], map.get(arr[i]) + 1);
+            } else {
+                map.put(arr[i], 1);
+            }
+        }
+
+        // Scan through original string and check count of each character
+        for (int j = 0; j < arr.length; j++) {
+            if (map.get(arr[j]) == 1) {
+                return arr[j];
+            }
+        }
+        
+        // No character with count == 1 found, return null.
+        return null;
+    }
