@@ -14,7 +14,6 @@ public static int singleNumber(int[] A) {
         if (entry.getValue() == 1) {
             return entry.getKey();
         }
-    } 
-    
+    }
     return -1;
 }
