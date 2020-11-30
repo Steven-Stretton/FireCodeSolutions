@@ -1,0 +1,28 @@
+// This solution uses the Level Order Traversal of the Binary Tree, implementing a LinkedList to store the nodes to be visited.
+
+public TreeNode findNode(TreeNode root, int val) {
+
+        if (root == null) {
+            return null;
+        }
+
+        Queue nodesToVisit = new LinkedList();
+
+        nodesToVisit.add(root);
+
+        while (!nodesToVisit.isEmpty()) {
+            TreeNode current = (TreeNode) nodesToVisit.remove();
+
+            if (current.data == val) {
+                return current;
+            }
+            if (current.left != null) {
+                nodesToVisit.add(current.left);
+            }
+            if (current.right != null) {
+                nodesToVisit.add(current.right);
+            }
+        }
+
+        return null;
+    }
