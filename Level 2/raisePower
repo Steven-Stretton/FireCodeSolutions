@@ -1,0 +1,15 @@
+public static double pow(double x, int n) {           
+      
+      if(n==0) return 1;             // Power of 1 returns 1
+      if(n==1) return x;             // Return original number
+      if(x==0) return x;             // Zero raised to the power always == 0
+      if(n<0) {                      // If negative power:
+          x = 1/x;                   
+          n = -n;                         
+      }
+      if(n%2 > 0) {                  // n is odd
+          return x*pow(x*x, n/2);
+      } else {                       //n is even
+          return pow(x*x, n/2);
+      }
+  }
