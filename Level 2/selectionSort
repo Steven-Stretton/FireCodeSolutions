@@ -1,0 +1,20 @@
+public static int[] selectionSortArray(int[] arr){
+
+        if (arr == null) {
+            return new int[] {};
+        }
+
+        for (int currentMinimum = 0; currentMinimum < arr.length; currentMinimum++) {
+
+            for (int currentItem = currentMinimum; currentItem < arr.length; currentItem++) {
+
+                if (arr[currentItem] < arr[currentMinimum]) {
+                    int temp = arr[currentMinimum];
+                    arr[currentMinimum] = arr[currentItem];
+                    arr[currentItem] = temp;
+                }
+            }
+        }
+
+        return arr;
+    }
