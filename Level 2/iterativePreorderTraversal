@@ -1,0 +1,29 @@
+public ArrayList<Integer> preorderItr(TreeNode root) {
+    
+    ArrayList<Integer> output = new ArrayList<>();      // List
+    Stack<TreeNode> stack = new Stack<>();              // Stack
+
+    // Edge case
+    if (root == null) {
+        return output;
+    }
+    
+    stack.push(root);
+    
+    while (!stack.isEmpty()) {
+        
+        TreeNode current = stack.pop(); 
+        
+        if (current.right != null) {
+            stack.push(current.right);
+        }
+        
+        if (current.left != null) {
+            stack.push(current.left);
+        }
+        
+        output.add(current.data);
+    }
+    
+    return output;
+}
