@@ -1,0 +1,12 @@
+public static String computeBinary(int val) {
+    
+    if (val == 1) {
+        return "1";
+    }
+    
+    if (val == 0) {
+        return "0";
+    }
+  
+    return computeBinary(val/2) + computeBinary(val%2);
+}
