@@ -1,0 +1,26 @@
+public static String compressString(String text) {
+
+        StringBuilder output = new StringBuilder();
+
+        char character = text.charAt(0);
+        int count = 0;
+
+        for (int i = 0; i < text.length(); i++) {
+
+            if (text.charAt(i) == character) {
+                count++;
+            } else {
+                output.append(character);
+                if (count > 1) {
+                    output.append(count);
+                }
+                character = text.charAt(i);
+                count = 1;
+            }
+        }
+        output.append(character);
+        if (count > 1) {
+                    output.append(count);
+                }
+        return output.toString();
+    }
