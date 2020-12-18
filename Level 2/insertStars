@@ -1,0 +1,15 @@
+public static String insertPairStar(String s) {
+ 
+    if (s == null || s.isEmpty() || s.length() == 1) {
+        return s;
+    }
+    
+    char first = s.charAt(0);
+    char second = s.charAt(1);
+    
+    if (first == second) {
+        return first + "*" + insertPairStar(s.substring(1, s.length()));
+    } else {
+        return first + insertPairStar(s.substring(1, s.length()));
+    }
+}
