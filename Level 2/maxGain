@@ -9,7 +9,7 @@ public static int maxGain(int[] a) {
             }
         }
     }
-    
+     
     if (maxGain <= 0) {
         return 0;
     } else {
