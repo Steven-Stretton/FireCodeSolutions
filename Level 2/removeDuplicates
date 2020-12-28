@@ -1,0 +1,12 @@
+public static ArrayList<String> removeDuplicates(List<String> input) {
+    
+    ArrayList<String> output = new ArrayList<>();
+    TreeSet<String> set = new TreeSet<>();
+    
+    for (String word : input) {
+        set.add(word);
+    }
+    
+    output.addAll(set);
+    return output;
+}
