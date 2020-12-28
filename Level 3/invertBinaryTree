@@ -1,0 +1,7 @@
+public TreeNode mirror(TreeNode root) {
+    
+    if (root == null) {
+        return null;
+    }
+    return new TreeNode(root.data, mirror(root.right), mirror(root.left));
+}
